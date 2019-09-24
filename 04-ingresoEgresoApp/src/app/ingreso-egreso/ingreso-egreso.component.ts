@@ -6,9 +6,10 @@ import { IngresoEgresoService } from './ingreso-egreso.service';
 
 import swal from 'sweetalert2';
 import { Store } from '@ngrx/store';
-import { AppState } from '../app.reducer';
+//import { AppState } from '../app.reducer';
 import { Subscription } from 'rxjs';
 import { ActivarLoadingAction, DesactivarLoadingAction } from '../shared/ui.actions';
+import { AppState } from './ingreso-egreso.reducer';
 
 @Component({
   selector: 'app-ingreso-egreso',

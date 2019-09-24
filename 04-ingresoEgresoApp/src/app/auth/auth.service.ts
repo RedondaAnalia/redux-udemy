@@ -100,6 +100,7 @@ export class AuthService {
     this.router.navigate(['/login']);
     this.afAuth.auth.signOut();
     this.store.dispatch( new UnsetUserAction());
+
   }
 
   isAuth() {
