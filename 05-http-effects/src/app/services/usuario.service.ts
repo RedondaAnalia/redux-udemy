@@ -14,7 +14,16 @@ export class UsuarioService {
 
 
   getUsers() {
-    return this.http.get(`${this.URL}/users?per_page=6`).pipe(
+    return this.http.get(`${this.URL}/users?per_page=6`)
+    .pipe(
+      map( respuesta => respuesta['data']
+        )
+      );
+  }
+
+  getUserById( id: string) {
+    return this.http.get(`${ this.URL }/users/${ id }`)
+    .pipe(
       map( respuesta => respuesta['data']
         )
       );
